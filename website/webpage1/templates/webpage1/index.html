@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio</title>
     <style>
+      body {
+      margin: 0;            /* Removes default margin */
+      width: 100vw;         /* Full viewport width */
+      }
     /* White Box Styles */
     #white_box {
       width: 100%;
@@ -14,7 +18,8 @@
       left: 0;
       background: white;
       box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.23);
-      border-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-bottom-left-radius: 100px;
     }
 
     /* Grey Box Styles */
@@ -22,6 +27,9 @@
       width: 100%;
       height: 272px;
       position: absolute;
+      display: flex;
+      justify-content: center;
+      text-align: center;
       top: 379px;
       left: -1px;
       background: rgba(217, 217, 217, 0.20);
@@ -60,13 +68,18 @@
 
     /* Navigation Container */
     #nav {
+      background-color: white;
       width: 512px;
-      height: 16px;
+      height: 30px;
       position: absolute;
-      top: 43px;
+      top: 28px;
       left: 463px;
-      display: flex; /* Use flexbox for alignment */
-      justify-content: space-between; /* Evenly space items */
+      display: flex; 
+      justify-content: space-between; 
+      z-index: 1000;
+      padding: 15px ;
+      border-radius: 50px;
+      margin: 0px;
     }
 
     /* Navigation Items */
@@ -100,7 +113,7 @@
       background: black;
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
       border-radius: 100px;
-      display: flex; /* Use flexbox for alignment */
+      display: flex; 
       align-items: center;
       justify-content: center;
     }
@@ -134,8 +147,7 @@
       width: 880px;
       height: 72px;
       position: absolute;
-      top: 523px;
-      left: 280px;
+      top: 150px;
       text-align: center;
       color: rgba(0, 0, 0, 0.70);
       font-size: 16px;
@@ -144,14 +156,13 @@
       word-wrap: break-word;
     }
     /* Circle Element Styles */
-    #circle_element {
+    .circle_element {
       width: 52px;
       height: 52px;
       position: absolute;
       top: 25px;
       left: 1222px;
-      background: black;
-      border-radius: 9999px; /* Fully rounded circle */
+      border-radius: 9999px; 
     }
         /* Social Buttons */
     .social_button {
@@ -163,6 +174,16 @@
       border: 1px solid black;
     }
 
+    .button_body{
+      position: absolute;
+      top: 615px;
+      width: 100%;
+      height: auto;
+      display:flex;
+      justify-content: center;
+      
+    }
+
     /* Button Labels */
     .button_label {
       text-align: center;
@@ -172,13 +193,9 @@
       font-weight: 600;
       word-wrap: break-word;
       margin: auto; 
-      /* line-height: 48px;  */
     }
 
     .button_group{
-      position: absolute;
-      top: 620px;
-      left: 570px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -187,11 +204,305 @@
     }
 
     .mountain_image{
-    width: 1184px;
-    height: 500px;
+    width: 1100px;
+    height: 460px;
     position: absolute;
-    left: 300px;
-    top: 150px;
+    left: 330px;
+    top: 15px;
+    opacity: 10%;
+    }
+    
+    .handshake{
+      position: absolute;
+      top:780px; 
+      width: 100%;
+      height: auto;
+      display:flex;
+      justify-content: center;
+    }
+    .handshake_img{
+      width: 110px; 
+      height: 112px;
+    }
+    .main_body_content{
+      position: absolute;
+      top:950px; 
+      width: 100%;
+      height: auto;
+      display:flex;
+      justify-content: center;
+    }
+    .service_heading_content{
+      position: absolute;
+      top:1100px; 
+      width: 100%;
+      height: auto;
+      display:flex;
+      gap: 24px;
+      justify-content: center;
+    }
+    .line_box{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 440px; 
+      height: 80px;
+    }
+    .collaborate_content{
+      width: 650px; 
+      height: 144px; 
+      text-align: center; 
+      color: rgba(0, 0, 0, 0.70); 
+      font-size: 32px; 
+      font-family: Roboto; 
+      font-weight: 800; 
+      word-wrap: break-word
+    }
+    .line{
+      width: 440px; 
+      height: 0px; 
+      border: 1px rgba(0, 0, 0, 0.30) solid
+    }
+    .service_div{
+      width: 160px; 
+      height: 80px; 
+      background: rgba(0, 0, 0, 0.70); 
+      border-radius: 100px;
+      font-family: Roboto; 
+      font-weight: 600; 
+      word-wrap: break-word; 
+      color: white; 
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main_icons_service{
+      position: absolute;
+      top: 1300px;
+      width: 100%;
+      height: 100PX;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      gap: 48px;
+    }
+
+
+    .title_content_services{
+      width: 139px; 
+      height: 32px; 
+      text-align: center; 
+      color: black; 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+    }
+    .image_services{
+      width: 63px; 
+      height: 64px; 
+    }
+    .icons_service{
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+      align-items: center; 
+      width: 140px;
+      height: 100px;
+      z-index: 1;
+      gap: 24px;
+    }
+    .main_projects_div{
+      display: flex; 
+      justify-content: center;
+      align-items: center; 
+      position: absolute;
+      top: 1589px; 
+      width: 100%;
+      height: auto; 
+
+    }
+    .projects_div{
+      width: 544px; 
+      height: 80px; 
+      background: rgba(0, 0, 0, 0.70); 
+      border-radius: 100px;
+      color: white; 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      text-align: center;
+      align-content: center;
+      z-index: 1;
+    }
+    .projects_collection{
+      width: 100%; 
+      height: 576px; 
+      position: absolute; 
+      left: 1px; 
+      top: 1629px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 64px;
+      background: rgba(217, 217, 217, 0.20)
+    }
+    .project_space{
+      width: 160px; 
+      height: 448px; 
+      background: white; 
+      box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; 
+      border-radius: 20px
+    }
+    .image_company{
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 2300px; 
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 220px;
+    }
+    
+    .job_pic{
+      width: 126.20px; 
+      height: 112px
+    }
+    .company_image{
+      width: 116px; 
+      height: 48px; 
+      mix-blend-mode: luminosity
+    }
+    .content_jobs{
+      position: absolute; 
+      top: 2468px; 
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      gap: 100px;
+    }
+    .line_straight{
+      display: flex;
+      align-content: center;
+    }
+    .line_division{
+      width: 1px; 
+      height: 120px; 
+      border: 2px rgba(0, 0, 0, 0.30) solid
+    }
+    .upper_footer{
+      position: absolute;
+      top: 2668px;
+      width: 100%;
+      height: 300px;
+      border: 3px rgba(0, 0, 0, 0.077) solid;
+      background-color: #d9d9d92c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 192px;
+    }
+    .footer_start{
+      display: flex;
+      justify-content: flex-start;
+      align-items:flex-start;
+      flex-wrap: wrap;
+      max-width: 480px;
+    }
+    .get_in_touch{
+      color: rgba(0, 0, 0, 0.70); 
+      font-size: 32px; 
+      font-family: roboto; 
+      font-weight: 600;
+
+    }
+    .footer_quote{
+      color: rgba(0, 0, 0, 0.70); 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      word-wrap: break-word;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+    .social_media_icons{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .social_media_image{
+      width:50px;
+      height: 50px;
+    }
+    .footer_end{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 448px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .input_name{
+      width: 160px; 
+      height: 38px;
+      border-top-left-radius: 20px; 
+      border-bottom-left-radius: 20px;
+      color: rgba(0, 0, 0, 0.50); 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      word-wrap: break-word;
+      text-indent: 20px;
+    }
+    .input_gmail{
+      border-top-right-radius: 20px; 
+      border-bottom-right-radius: 20px;
+      width: 256px; 
+      height: 38px; 
+      color: rgba(0, 0, 0, 0.50); 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      text-indent: 20px;
+      word-wrap: break-word
+    }
+    .send_button{
+      margin-top: 16px;
+      width: 448px; 
+      height: 48px;
+      text-align: center; 
+      color: white; 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      word-wrap: break-word;
+      border-radius: 20px;
+      background: black;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    }
+    .lower_footer{
+      background-color:#d9d9d94a;
+      position: absolute;
+      top: 2968px;
+      width: 100%;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rights{
+      width: 212px; 
+      height: auto; 
+      text-align:center; 
+      color: rgba(0, 0, 0, 0.40); 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      word-wrap: break-word
     }
     </style>
 </head>
@@ -205,112 +516,143 @@
       <div id="line"></div>
       <button class="contact_label" id="contact_button">CONTACT</button>
     <div id="portfolio_label">PORTFOLIO</div>
-    <img class="mountain_image" src="{% static 'webpage1/images/R.png' %}" alt="Template Image">
-    <div id="circle_element"></div>
-    <navbar>
+    <img class="mountain_image" src="{% static 'webpage1/images/y.png' %}" alt="Template Image">
+    <a style="text-decoration: none;"><img class="circle_element" src="{% static 'webpage1/images/resume2.png' %}" alt="resume Image">
+     </a>
+      <navbar>
       <div id="nav">
-        <div id="about">ABOUT</div>
-        <!-- <div style="width: 20px; height: 0px; left: 505px; top: 67px; position: absolute; border: 1px black solid"></div> -->
-        <div id="services">SERVICES</div>
-        <div id="projects">PROJECTS</div>
-        <div id="experience">EXPERIENCE</div>
+        <div id="about" style="text-decoration: underline;text-underline-offset: 6px;text-decoration-thickness: 2px;"><a style="text-decoration: none;">ABOUT</a></div>
+        <div id="services"><a style="text-decoration: none;">SERVICES</a></div>
+        <div id="projects"><a style="text-decoration: none;">PROJECTS</a></div>
+        <div id="experience"><a style="text-decoration: none;">EXPERIENCE</a></div>
       </div>
     </navbar>
     </div>
-
     
-    
-
-    
-
-    <div id="grey_box"></div>
-    <div id="professional_summary">
+    <div id="grey_box">
+      <div id="professional_summary">
       Passionate IT professional with a focus on creating seamless digital experiences through UI/UX design, web development, and Java application development. Skilled in blending creativity with technical expertise to deliver user-centered solutions. Committed to continuous learning and innovation to stay at the forefront of the ever-evolving tech landscape.
-    </div>
-
-      <div class="button_group">
-      <button class="social_button button_label" id="linkedin_button">
-        LINKEDIN
-      </button>
-      
-      <button class="social_button button_label" id="github_button">
-        GITHUB
-      </button>
-    </div>
-
-    
-
-    </header>
-
-
-
-
-
-  <main>
-    <div style="width: 50px; height: 48px; padding-top: 4px; padding-bottom: 4.97px; padding-left: 4.17px; padding-right: 4.17px; left: 160px; top: 2941px; position: absolute; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24); justify-content: center; align-items: center; display: inline-flex">
-      <div style="width: 41.67px; height: 39.03px; background: black"></div>
-    </div>
-    <div style="width: 50px; height: 48px; padding-top: 4px; padding-bottom: 4.10px; padding-left: 4.17px; padding-right: 4.17px; left: 225px; top: 2941px; position: absolute; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24); justify-content: center; align-items: center; display: inline-flex">
-      <div style="width: 41.67px; height: 39.90px; background: black"></div>
-    </div>
-    <img style="width: 110px; height: 112px; left: 665px; top: 787px; position: absolute" src="https://via.placeholder.com/110x112" />
-    <div style="width: 440px; height: 0px; left: 159px; top: 1189px; position: absolute; border: 1px rgba(0, 0, 0, 0.30) solid"></div>
-    <div style="width: 105px; height: 0px; left: 720px; top: 2484px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 1px rgba(0, 0, 0, 0.30) solid"></div>
-    <div style="width: 440px; height: 0px; left: 840px; top: 1191px; position: absolute; border: 1px rgba(0, 0, 0, 0.30) solid"></div>
-    <div style="width: 160px; height: 80px; left: 640px; top: 1149px; position: absolute; background: rgba(0, 0, 0, 0.70); border-radius: 100px"></div>
-    <div style="width: 1439px; height: 576px; left: 1px; top: 1629px; position: absolute; background: rgba(217, 217, 217, 0.20)"></div>
-    <div style="width: 104px; height: 24px; left: 668px; top: 1178px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">SERVICES</div>
-    <div style="width: 544px; height: 80px; left: 448px; top: 1589px; position: absolute; background: rgba(0, 0, 0, 0.70); border-radius: 100px"></div>
-    <div style="width: 104px; height: 24px; left: 668px; top: 1617px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">PROJECTS</div>
-    <!-- <div style="width: 43px; height: 42px; padding-left: 0.86px; padding-right: 0.86px; padding-top: 0.84px; padding-bottom: 0.84px; left: 290px; top: 2945px; position: absolute; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24); justify-content: center; align-items: center; display: inline-flex">
-      <div style="width: 41.28px; height: 40.32px; background: black"></div>
-    </div> -->
-    <div style="width: 784px; height: 144px; left: 328px; top: 955px; position: absolute; text-align: center; color: rgba(0, 0, 0, 0.70); font-size: 48px; font-family: Saira Condensed; font-weight: 700; word-wrap: break-word">Collaborate with brand and agencies to create impactful results.</div>
-     <!-- <img style="width: 63px; height: 64px; left: 342px; top: 1297px; position: absolute" src="https://via.placeholder.com/63x64" />
-    <img style="width: 64px; height: 64px; left: 1016px; top: 1297px; position: absolute" src="https://via.placeholder.com/64x64" /> -->
-    
-    <div style="width: 139px; height: 32px; left: 304px; top: 1389px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">UI/UX DESIGNER</div>
-    <div style="width: 139px; height: 32px; left: 754px; top: 1389px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">JAVA DEVELOPER</div>
-    <div style="width: 139px; height: 32px; left: 529px; top: 1389px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">FORMULATOR</div>
-    <div style="width: 168px; height: 32px; left: 967px; top: 1389px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">WEB DEVELOPER</div>
-    <div style="width: 160px; height: 448px; left: 352px; top: 1693px; position: absolute; background: white; box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; border-radius: 20px"></div>
-    <div style="width: 160px; height: 448px; left: 928px; top: 1693px; position: absolute; background: white; box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; border-radius: 20px"></div>
-    <div style="width: 160px; height: 448px; left: 736px; top: 1693px; position: absolute; background: white; box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; border-radius: 20px"></div>
-    <div style="width: 160px; height: 448px; left: 544px; top: 1693px; position: absolute; background: white; box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; border-radius: 20px"></div>
-    <div style="width: 68px; height: 64px; left: 790px; top: 1297px; position: absolute; border-radius: 71px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
-      <div style="width: 68px; height: 64px; position: relative">
-        <div style="width: 68px; height: 64px; left: 0px; top: 0px; position: absolute; background: rgba(0, 0, 0, 0.70)"></div>
-        <div style="width: 39.18px; height: 22.95px; left: 14.34px; top: 34.05px; position: absolute; background: white"></div>
-        <div style="width: 18.90px; height: 29.22px; left: 26.99px; top: 7px; position: absolute; background: white"></div>
       </div>
     </div>
-    <div style="width: 64px; height: 64px; left: 566px; top: 1297px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-      <div style="width: 64px; height: 64px; background: rgba(0, 0, 0, 0.70)"></div>
-    </div>
-    <div style="width: 16px; height: 16px; left: 672px; top: 2165px; position: absolute; background: #D9D9D9; border-radius: 9999px; border: 1px black solid"></div>
-    <div style="width: 16px; height: 16px; left: 712px; top: 2165px; position: absolute; background: black; border-radius: 9999px"></div>
-    <div style="width: 16px; height: 16px; left: 752px; top: 2165px; position: absolute; background: #D9D9D9; border-radius: 9999px; border: 1px black solid"></div>
-    </main>
 
-    <footer>
-      <div style="width: 256px; height: 48px; left: 160px; top: 2829px; position: absolute; color: rgba(0, 0, 0, 0.70); font-size: 48px; font-family: Saira Condensed; font-weight: 700; word-wrap: break-word">GET IN TOUCH</div>
-      <!-- <div style="width: 1439px; height: 301px; left: 1px; top: 2752px; position: absolute; background: rgba(217, 217, 217, 0.20); border: 1px rgba(0, 0, 0, 0.10) solid"></div> -->
-    <!-- <div style="width: 1439px; height: 54px; left: 1px; top: 3053px; position: absolute; background: rgba(217, 217, 217, 0.20)"></div> -->
+    <div class="button_body">
+      <div class="button_group">
+        <button class="social_button button_label" id="linkedin_button">
+          LINKEDIN
+        </button> 
+        <button class="social_button button_label" id="github_button">
+          GITHUB
+        </button>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
     
-    <div style="width: 480px; height: 40px; left: 160px; top: 2887px; position: absolute; color: rgba(0, 0, 0, 0.70); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">"Technology is not just a tool, it’s the bridge to infinite possibilities. Embrace it, and you shape the future."</div>
-    <div style="width: 160px; height: 38px; left: 832px; top: 2887px; position: absolute; background: white; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px black solid"></div>
-    <div style="width: 256px; height: 38px; left: 1024px; top: 2887px; position: absolute; background: white; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px black solid"></div>
-    <div style="width: 448px; height: 48px; left: 832px; top: 2941px; position: absolute; background: black; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24); border-radius: 30px"></div>
-    <div style="width: 104px; height: 14px; left: 1004px; top: 2958px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">SEND</div>
-    <div style="width: 72px; height: 38px; left: 848px; top: 2887px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Name</div>
-    <div style="width: 72px; height: 38px; left: 1040px; top: 2887px; position: absolute; color: rgba(0, 0, 0, 0.50); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Gmail</div>
-    <img style="width: 126.20px; height: 112px; left: 657px; top: 2342px; position: absolute" src="https://via.placeholder.com/126x112" />
-    <img style="width: 116px; height: 48px; left: 982px; top: 2404px; position: absolute; mix-blend-mode: luminosity" src="https://via.placeholder.com/116x48" />
-    <img style="width: 84px; height: 32px; left: 352px; top: 2412px; position: absolute; mix-blend-mode: luminosity" src="https://via.placeholder.com/84x32" />
+    <div class="handshake">
+      <img class="handshake_img" src="{% static 'webpage1/images/handshake.png' %}" />
+    </div>
+
+    <div class="main_body_content">
+      <div class="collaborate_content">Collaborate with Brands and Agencies to Create Impactful Results.
+      </div>
+    </div>
+
+    <div class="service_heading_content">
+      <div class="line_box">
+        <div class="line">
+        </div>
+      </div>
+      <div class="service_div">
+        SERVICES</div>
+      <div class="line_box">
+        <div class="line">
+        </div>
+      </div>
+    </div>
+
+    <div class="main_icons_service">
+      <div class="icons_service"> 
+        <img class="image_services" src="{static https://via.placeholder.com/63x64}" />
+        <div class="title_content_services">UI/UX DESIGNER</div>
+      </div>
+      <div class="icons_service"> 
+        <img class="image_services" src="https://via.placeholder.com/63x64" />
+        <div class="title_content_services">FORMULATOR</div>
+      </div>
+      <div class="icons_service"> 
+        <img class="image_services" src="https://via.placeholder.com/63x64" />
+        <div class="title_content_services">WEB DEVELOPER</div>
+      </div>
+      <div class="icons_service"> 
+        <img class="image_services" src="https://via.placeholder.com/63x64" />
+        <div class="title_content_services">JAVA DEVELOPER</div>
+      </div>
+    </div>  
     
-    <div style="width: 476px; height: 136px; left: 164px; top: 2468px; position: absolute; text-align: justify; color: rgba(0, 0, 0, 0.70); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Summer Internship at IBM – Front-End Developer  During my internship at IBM, I had the opportunity to work on innovative projects that enhanced my skills in front-end development. My primary focus was on designing and developing user-friendly interfaces using modern technologies like HTML5, CSS3, JavaScript.</div>
-    <div style="width: 480px; height: 136px; left: 800px; top: 2468px; position: absolute; text-align: justify; color: rgba(0, 0, 0, 0.70); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Core Java Internship at OctaNET - During my internship at Octanet, I gained hands-on experience in developing Java-based applications, enhancing my expertise in Core Java concepts and programming techniques. This internship provided me with the opportunity to work on real-world projects, applying object-oriented principles and mastering Java’s versatile features.</div>
-    <div style="width: 212px; height: 24px; left: 622px; top: 3068px; position: absolute; text-align: center; color: rgba(0, 0, 0, 0.40); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">@2025 All Rights Reserved</div>  
+    <div class="main_projects_div">
+      <div class="projects_div">
+        PROJECTS
+      </div>
+    </div>
+
+    <div class="projects_collection">
+      <div class="project_space" ></div>
+      <div class="project_space" ></div>
+      <div class="project_space" ></div>
+      <div class="project_space" ></div>
+    </div> 
+    
+    <div class="image_company">    
+      <img class="company_image" src="https://via.placeholder.com/84x32" />
+      <img class="job_pic" src="https://via.placeholder.com/126x112" />
+      <img class="company_image" src="https://via.placeholder.com/116x48" />
+    </div>
+    
+    <div class="content_jobs">
+      <div style="width: 476px; height: 136px;  text-align: justify; color: rgba(0, 0, 0, 0.70); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Summer Internship at IBM – Front-End Developer  During my internship at IBM, I had the opportunity to work on innovative projects that enhanced my skills in front-end development. My primary focus was on designing and developing user-friendly interfaces using modern technologies like HTML5, CSS3, JavaScript.
+      </div>
+      <div class="line_straight">
+      <div class="line_division"></div>
+      </div>
+      <div style="width: 480px; height: 136px; text-align: justify; color: rgba(0, 0, 0, 0.70); font-size: 16px; font-family: Roboto; font-weight: 600; word-wrap: break-word">Core Java Internship at OctaNET - During my internship at Octanet, I gained hands-on experience in developing Java-based applications, enhancing my expertise in Core Java concepts and programming techniques. This internship provided me with the opportunity to work on real-world projects, applying object-oriented principles and mastering Java’s versatile features.
+      </div>
+    </div>
+    
+  </main>
+
+  <footer>
+
+    <div class="upper_footer">
+      <div class="footer_start">
+        <div class="get_in_touch">
+          GET IN TOUCH
+        </div>
+        <div class="footer_quote">
+          "Technology is not just a tool, it’s the bridge to infinite possibilities. Embrace it, and you shape the future."
+        </div>
+        <div class="social_media_icons">
+            <img class="social_media_image">
+            <img class="social_media_image">
+            <img class="social_media_image">
+        </div>  
+      </div>
+
+      <div class="footer_end">
+          <input class="input_name" placeholder="Name" >
+          <input class="input_gmail" placeholder="Gmail">
+          <button class="send_button">SEND</button>
+      </div>
+    </div>
+
+    
+
+    <div class="lower_footer">
+      <div class="rights">@2025 All Rights Reserved</div>
+    </div>
+       
+    
   </footer>
     
 </body>
