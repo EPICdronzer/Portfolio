@@ -16,7 +16,7 @@
       position: absolute;
       top: -1px;
       left: 0;
-      background: white;
+      background: linear-gradient(to bottom, #FDE68A, #F9F9F9);
       box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.23);
       border-bottom-right-radius: 100px;
       border-bottom-left-radius: 100px;
@@ -32,9 +32,9 @@
       text-align: center;
       top: 379px;
       left: -1px;
-      background: rgba(217, 217, 217, 0.20);
+      background: #FDE68A;
       border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-      z-index: 0;
+      z-index: -1;
     }
 
     /* Name Section Styles */
@@ -65,33 +65,54 @@
       font-weight: 600;
       word-wrap: break-word;
     }
-
+    .nav_div{
+      display: flex;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 24px;
+    }
     /* Navigation Container */
     #nav {
-      background-color: white;
-      width: 512px;
-      height: 30px;
-      position: absolute;
-      top: 28px;
-      left: 463px;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1125px;
+      height: auto;
       display: flex; 
-      justify-content: space-between; 
+      justify-content: center; 
+      align-items: center;
       z-index: 1000;
-      padding: 15px ;
       border-radius: 50px;
-      margin: 0px;
-    }
+      gap: 272px;
 
-    /* Navigation Items */
-    #nav > div {
-      width: 104px;
-      height: 16px;
-      text-align: center;
+    }
+    /* Portfolio Label Styles */
+    #portfolio_label {
       color: black;
       font-size: 16px;
       font-family: 'Roboto', sans-serif;
       font-weight: 600;
-      word-wrap: break-word;
+    }
+    .main_nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      color: black;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+    }
+    .circle_element {
+      width: 52px;
+      height: 52px;
+      border-radius: 9999px; 
+
+    }
+    .resume_hyperlink_pic{
+      width: 48px;
+      height: 48px;
     }
     /* Line Styles */
     #line {
@@ -128,20 +149,7 @@
       word-wrap: break-word;
     }
 
-    /* Portfolio Label Styles */
-    #portfolio_label {
-      width: 104px;
-      height: 24px;
-      position: absolute;
-      top: 45px;
-      left: 156px;
-      text-align: center;
-      color: black;
-      font-size: 16px;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 600;
-      word-wrap: break-word;
-    }
+    
     /* Professional Summary Styles */
     #professional_summary {
       width: 880px;
@@ -155,15 +163,7 @@
       font-weight: 600;
       word-wrap: break-word;
     }
-    /* Circle Element Styles */
-    .circle_element {
-      width: 52px;
-      height: 52px;
-      position: absolute;
-      top: 25px;
-      left: 1222px;
-      border-radius: 9999px; 
-    }
+    
         /* Social Buttons */
     .social_button {
       width: 160px;
@@ -345,7 +345,8 @@
       justify-content: center;
       align-items: center;
       gap: 64px;
-      background: rgba(217, 217, 217, 0.20)
+      background: #FDE68A;
+      z-index: -1;
     }
     .project_space{
       width: 160px; 
@@ -515,16 +516,21 @@
       <div id="roles">DESIGNER | DEVELOPER</div>
       <div id="line"></div>
       <button class="contact_label" id="contact_button">CONTACT</button>
-    <div id="portfolio_label">PORTFOLIO</div>
-    <img class="mountain_image" src="{% static 'webpage1/images/y.png' %}" alt="Template Image">
-    <a style="text-decoration: none;"><img class="circle_element" src="{% static 'webpage1/images/resume2.png' %}" alt="resume Image">
-     </a>
-      <navbar>
+      <img class="mountain_image" src="{% static 'webpage1/images/y.png' %}" alt="Template Image">
+      <navbar class="nav_div">
       <div id="nav">
-        <div id="about" style="text-decoration: underline;text-underline-offset: 6px;text-decoration-thickness: 2px;"><a style="text-decoration: none;">ABOUT</a></div>
-        <div id="services"><a style="text-decoration: none;">SERVICES</a></div>
-        <div id="projects"><a style="text-decoration: none;">PROJECTS</a></div>
-        <div id="experience"><a style="text-decoration: none;">EXPERIENCE</a></div>
+        <div id="portfolio_label">PORTFOLIO</div>
+          <div class="main_nav">
+            <div id="about" style="text-decoration: underline;text-underline-offset: 6px;text-decoration-thickness: 2px;"><a style="text-decoration: none;">ABOUT</a></div>
+            <div id="services"><a style="text-decoration: none;">SERVICES</a></div>
+            <div id="projects"><a style="text-decoration: none;">PROJECTS</a></div>
+            <div id="experience"><a style="text-decoration: none;">EXPERIENCE</a></div>
+          </div>
+          <div class="circle_element">
+            <a>
+              <img class="resume_hyperlink_pic" src="{% static 'webpage1/images/resume2.png' %}" alt="resume Image">
+            </a>
+          </div>
       </div>
     </navbar>
     </div>
