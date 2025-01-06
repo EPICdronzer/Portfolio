@@ -16,7 +16,7 @@
       position: absolute;
       top: -1px;
       left: 0;
-      background: linear-gradient(to bottom, #FDE68A, #F9F9F9);
+      background: linear-gradient(to bottom, rgba(253, 230, 100, 0.429), #F9F9F9);
       box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.23);
       border-bottom-right-radius: 100px;
       border-bottom-left-radius: 100px;
@@ -32,7 +32,7 @@
       text-align: center;
       top: 379px;
       left: -1px;
-      background: #FDE68A;
+      background: rgba(253, 230, 100, 0.429);
       border-bottom: 1px solid rgba(0, 0, 0, 0.20);
       z-index: -1;
     }
@@ -68,38 +68,38 @@
     .nav_div{
       display: flex;
       width: 100%;
-      height: auto;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      top: 24px;
+      position: fixed;
+      /* top: 24px; */
+      z-index: 1000;
     }
     /* Navigation Container */
     #nav {
       background-color: rgba(255, 255, 255, 0.5);
-      width: 1125px;
-      height: auto;
+      width: 100%;
+      height: 60px;
       display: flex; 
       justify-content: center; 
       align-items: center;
       z-index: 1000;
-      border-radius: 50px;
-      gap: 272px;
+      gap: 264px;
 
     }
     /* Portfolio Label Styles */
     #portfolio_label {
-      color: black;
+      color: rgba(0, 0, 0, 0.7);
       font-size: 16px;
       font-family: 'Roboto', sans-serif;
       font-weight: 600;
+      /* margin-left: 15px; */
     }
     .main_nav{
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 32px;
-      color: black;
+      gap: 48px;
+      color: rgba(0, 0, 0, 0.7);
       font-size: 16px;
       font-family: 'Roboto', sans-serif;
       font-weight: 600;
@@ -108,11 +108,23 @@
       width: 52px;
       height: 52px;
       border-radius: 9999px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
     }
     .resume_hyperlink_pic{
       width: 48px;
       height: 48px;
+      opacity:70%;
+      border-radius: 100px;
+      box-shadow: 0px 18px 18px 18px rgba(0, 0, 0, 0.05);
+    }
+    .resume_anchor{
+      padding: 0px;
+      margin: 0px;
+      height: 48px;
+      width: 48px;
     }
     /* Line Styles */
     #line {
@@ -131,12 +143,13 @@
       position: absolute;
       top: 309px;
       left: 352px;
-      background: black;
-      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+      background: #2561BA;
+      box-shadow: 0px 3px 8px #2561BA;
       border-radius: 100px;
       display: flex; 
       align-items: center;
       justify-content: center;
+      z-index: 1000;
     }
 
     /* Contact Label Styles */
@@ -265,35 +278,33 @@
     }
     .service_div{
       width: 160px; 
-      height: 80px; 
-      background: rgba(0, 0, 0, 0.70); 
+      height: 80px;
       border-radius: 100px;
       font-family: Roboto; 
       font-weight: 600; 
       word-wrap: break-word; 
-      color: white; 
-      font-size: 16px;
+      color: rgba(0, 0, 0, 0.70); 
+      font-size: 22px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .main_icons_service{
       position: absolute;
-      top: 1300px;
+      top: 1260px;
       width: 100%;
-      height: 100PX;
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center; 
       gap: 48px;
     }
 
-
     .title_content_services{
       width: 139px; 
       height: 32px; 
       text-align: center; 
-      color: black; 
+      color: rgba(0, 0, 0, 0.7); 
       font-size: 16px; 
       font-family: Roboto; 
       font-weight: 600; 
@@ -307,65 +318,78 @@
       flex-wrap: wrap; 
       justify-content: center;
       align-items: center; 
-      width: 140px;
-      height: 100px;
+      width: 150px;
+      height: 158px;
       z-index: 1;
-      gap: 24px;
+      background: linear-gradient(to bottom, rgba(253, 230, 100, 0.429), #F9F9F9);
+      border-radius: 20px;
     }
     .main_projects_div{
       display: flex; 
       justify-content: center;
       align-items: center; 
       position: absolute;
-      top: 1589px; 
+      top: 1550px; 
       width: 100%;
       height: auto; 
+      gap: 72px;
 
     }
     .projects_div{
-      width: 544px; 
-      height: 80px; 
-      background: rgba(0, 0, 0, 0.70); 
+      width: auto; 
+      height: auto; 
       border-radius: 100px;
-      color: white; 
-      font-size: 16px; 
+      color:  rgba(0, 0, 0, 0.70); 
+      font-size: 22px; 
       font-family: Roboto; 
       font-weight: 600; 
       text-align: center;
       align-content: center;
       z-index: 1;
     }
+    .small{
+      width:200px;
+    }
+
     .projects_collection{
       width: 100%; 
-      height: 576px; 
+      height: 700px; 
       position: absolute; 
-      left: 1px; 
-      top: 1629px; 
+      top: 1500px; 
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 64px;
-      background: #FDE68A;
+      background: rgba(253, 230, 100, 0.429);
       z-index: -1;
     }
     .project_space{
-      width: 160px; 
+      width: 180px; 
       height: 448px; 
       background: white; 
-      box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; 
-      border-radius: 20px
+      box-shadow: 0px 18px 18px 18px rgba(0, 0, 0, 0.20) ; 
+      border-radius: 20px;
     }
     .image_company{
       position: absolute;
       width: 100%;
       height: auto;
-      top: 2300px; 
+      top: 2250px; 
       display: flex;
       justify-content: center;
       align-items: baseline;
       gap: 220px;
     }
-    
+    .image_company_pic{
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 2400px; 
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 570px;
+    }
     .job_pic{
       width: 126.20px; 
       height: 112px
@@ -399,8 +423,7 @@
       top: 2668px;
       width: 100%;
       height: 300px;
-      border: 3px rgba(0, 0, 0, 0.077) solid;
-      background-color: #d9d9d92c;
+      background: linear-gradient(to bottom, rgba(253, 230, 100, 0.429), #F9F9F9);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -445,7 +468,6 @@
       align-items: center;
       max-width: 448px;
       flex-wrap: wrap;
-      gap: 16px;
     }
     .input_name{
       width: 160px; 
@@ -462,7 +484,7 @@
     .input_gmail{
       border-top-right-radius: 20px; 
       border-bottom-right-radius: 20px;
-      width: 256px; 
+      width: 272px; 
       height: 38px; 
       color: rgba(0, 0, 0, 0.50); 
       font-size: 16px; 
@@ -470,6 +492,17 @@
       font-weight: 600; 
       text-indent: 20px;
       word-wrap: break-word
+    }
+    .input_message{
+      border-radius: 20px;
+      width: 544px; 
+      height: 38px; 
+      color: rgba(0, 0, 0, 0.50); 
+      font-size: 16px; 
+      font-family: Roboto; 
+      font-weight: 600; 
+      text-indent: 20px;
+      margin-top: 16px;
     }
     .send_button{
       margin-top: 16px;
@@ -482,11 +515,11 @@
       font-weight: 600; 
       word-wrap: break-word;
       border-radius: 20px;
-      background: black;
-      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+      background: #2561BA;
+      box-shadow: 0px 3px 8px #2561BA;
     }
     .lower_footer{
-      background-color:#d9d9d94a;
+      background-color:white;
       position: absolute;
       top: 2968px;
       width: 100%;
@@ -505,7 +538,79 @@
       font-weight: 600; 
       word-wrap: break-word
     }
+    .circle_group{
+      display: flex;
+      position: absolute;
+      top: 2130px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      gap: 24px;
+    }
+    .switch_circle{
+      border: 1px solid black;
+      border-radius: 100px;
+      width: 16px;
+      height: 16px;
+
+    }
+    .blue_switch_circle{
+      background-color: #2561BA;
+    }
+    .work_experience{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 128px;
+      flex-wrap: wrap;
+    }
+    .experience_word{
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-family: Roboto; 
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.70); 
+      font-size: 22px;
+    }
+    .short{
+      width: 60px;
+    }
+    .project_space_img{
+      width: 180px; 
+      height: 448px; 
+      background: white; 
+      box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30) inset; 
+      border-radius: 20px
+    }
+
+    #about:hover{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+      color: black;
+    }
+    #services:hover{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+      color: black;
+    }
+
+    #projects:hover{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+      color: black;
+    }
+    #experience:hover{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+    }
     </style>
+
+  
 </head>
 <body>
   {% load static %}
@@ -515,19 +620,19 @@
       <div id="name">HARSH VASHISHTH</div>
       <div id="roles">DESIGNER | DEVELOPER</div>
       <div id="line"></div>
-      <button class="contact_label" id="contact_button">CONTACT</button>
+      <button onclick="window.location.href='mailto:vharsh2003@example.com'" class="contact_label" id="contact_button" src="https://">CONTACT</button>
       <img class="mountain_image" src="{% static 'webpage1/images/y.png' %}" alt="Template Image">
       <navbar class="nav_div">
       <div id="nav">
         <div id="portfolio_label">PORTFOLIO</div>
           <div class="main_nav">
-            <div id="about" style="text-decoration: underline;text-underline-offset: 6px;text-decoration-thickness: 2px;"><a style="text-decoration: none;">ABOUT</a></div>
-            <div id="services"><a style="text-decoration: none;">SERVICES</a></div>
-            <div id="projects"><a style="text-decoration: none;">PROJECTS</a></div>
-            <div id="experience"><a style="text-decoration: none;">EXPERIENCE</a></div>
+            <div id="about"><a style="text-decoration: none;color: rgba(0, 0, 0, 0.7);;" href="#white_box">ABOUT</a></div>
+            <div id="services"><a style="text-decoration: none;color: rgba(0, 0, 0, 0.7);" href="#handshake_div">SERVICES</a></div>
+            <div id="projects"><a style="text-decoration: none;color: rgba(0, 0, 0, 0.7);" href="#p_c">PROJECTS</a></div>
+            <div id="experience"><a style="text-decoration: none;color: rgba(0, 0, 0, 0.7);;" href="#circle_id">EXPERIENCE</a></div>
           </div>
           <div class="circle_element">
-            <a>
+            <a class="resume_anchor" href="https://www.linkedin.com/in/harsh-vashishth-7b15981bb">
               <img class="resume_hyperlink_pic" src="{% static 'webpage1/images/resume2.png' %}" alt="resume Image">
             </a>
           </div>
@@ -543,10 +648,10 @@
 
     <div class="button_body">
       <div class="button_group">
-        <button class="social_button button_label" id="linkedin_button">
+        <button class="social_button button_label" onclick="window.open('https://www.linkedin.com/in/harsh-vashishth-7b15981bb', '_blank')" id="linkedin_button">
           LINKEDIN
         </button> 
-        <button class="social_button button_label" id="github_button">
+        <button class="social_button button_label" onclick="window.open('https://github.com/EPICdronzer', '_blank')" id="github_button">
           GITHUB
         </button>
       </div>
@@ -556,7 +661,7 @@
 
   <main>
     
-    <div class="handshake">
+    <div id="handshake_div" class="handshake">
       <img class="handshake_img" src="{% static 'webpage1/images/handshake.png' %}" />
     </div>
 
@@ -580,40 +685,67 @@
 
     <div class="main_icons_service">
       <div class="icons_service"> 
-        <img class="image_services" src="{static https://via.placeholder.com/63x64}" />
+        <img class="image_services" src="{% static 'webpage1/images/ui.png' %}" />
         <div class="title_content_services">UI/UX DESIGNER</div>
       </div>
       <div class="icons_service"> 
-        <img class="image_services" src="https://via.placeholder.com/63x64" />
+        <img class="image_services" src="{% static 'webpage1/images/formulator.png' %}" />
         <div class="title_content_services">FORMULATOR</div>
       </div>
       <div class="icons_service"> 
-        <img class="image_services" src="https://via.placeholder.com/63x64" />
+        <img class="image_services" src="{% static 'webpage1/images/dev.png' %}" />
         <div class="title_content_services">WEB DEVELOPER</div>
       </div>
       <div class="icons_service"> 
-        <img class="image_services" src="https://via.placeholder.com/63x64" />
+        <img class="image_services" src="{% static 'webpage1/images/java_dev.png' %}" />
         <div class="title_content_services">JAVA DEVELOPER</div>
       </div>
     </div>  
     
     <div class="main_projects_div">
+        <div class="line small">
+      </div>
       <div class="projects_div">
         PROJECTS
       </div>
+        <div class="line small">
+        </div>
     </div>
 
-    <div class="projects_collection">
-      <div class="project_space" ></div>
-      <div class="project_space" ></div>
-      <div class="project_space" ></div>
-      <div class="project_space" ></div>
+    <div id="p_c" class="projects_collection">
+      <div class="project_space" >
+        <img class="project_space_img" src="{% static 'webpage1/images/auction_ms2.png' %}">
+      </div>
+      <div class="project_space" >
+        <img class="project_space_img" src="{% static 'webpage1/images/art_website3.jpg' %}">
+      </div>
+      <div class="project_space" >
+        <img class="project_space_img" src="{% static 'webpage1/images/fitness_website2.png' %}">
+      </div>
+      <div class="project_space" >
+        <img class="project_space_img" src="{% static 'webpage1/images/portfolio_website.jpg' %}">
+      </div>
     </div> 
     
+    <div id="circle_id" class="circle_group">
+      <div class="switch_circle"></div>
+      <div class="switch_circle blue_switch_circle"></div>
+      <div class="switch_circle"></div>
+    </div>
+
     <div class="image_company">    
-      <img class="company_image" src="https://via.placeholder.com/84x32" />
-      <img class="job_pic" src="https://via.placeholder.com/126x112" />
-      <img class="company_image" src="https://via.placeholder.com/116x48" />
+      <div class="work_experience">
+        <img class="job_pic" src="{% static 'webpage1/images/work.png' %}" />
+        <div class="experience_word">
+          EXPERIENCE
+        </div>
+        <div class="line short"></div>
+      </div>
+    </div>
+
+    <div class="image_company_pic">
+      <img class="company_image" src="{% static 'webpage1/images/ibm.png' %}" />
+      <img class="company_image" src="{% static 'webpage1/images/octanet.png' %}" />
     </div>
     
     <div class="content_jobs">
@@ -639,27 +771,48 @@
           "Technology is not just a tool, it’s the bridge to infinite possibilities. Embrace it, and you shape the future."
         </div>
         <div class="social_media_icons">
-            <img class="social_media_image">
-            <img class="social_media_image">
-            <img class="social_media_image">
+            <a href="https://github.com/EPICdronzer"><img class="social_media_image" src="{% static 'webpage1/images/github.png' %}"></a>
+            <a href="https://www.facebook.com/harsh.vashishth.75"><img class="social_media_image" src="{% static 'webpage1/images/facebook.png' %}"></a>
+            <a href="https://www.linkedin.com/in/harsh-vashishth-7b15981bb"><img class="social_media_image" src="{% static 'webpage1/images/linkedin.png' %}"></a>
         </div>  
       </div>
 
       <div class="footer_end">
-          <input class="input_name" placeholder="Name" >
-          <input class="input_gmail" placeholder="Gmail">
-          <button class="send_button">SEND</button>
+          <input id="name2" class="input_name" placeholder="Name" >
+          <input id="gmail" class="input_gmail" placeholder="Gmail">
+          <input id="message" class="input_message" placeholder="Enter Message">
+          <button onclick="sendEmail()" class="send_button">
+            SEND
+          </button>
       </div>
     </div>
 
-    
-
     <div class="lower_footer">
-      <div class="rights">@2025 All Rights Reserved</div>
+      <div class="rights">
+        @2025 All Rights Reserved
+      </div>
     </div>
        
-    
   </footer>
-    
+  <script>
+    function sendEmail() {
+      const name = document.getElementById('name2').value;
+      const message = document.getElementById('message').value;
+      const gmail = document.getElementById('gmail').value;
+
+      if (name && message && gmail) {
+        const subject = encodeURIComponent(`Message from ${name} (${gmail})`);
+        const body = encodeURIComponent(message);
+        const recipient = 'vharsh2003@gmail.com'; 
+
+        // Redirect to the mailto link
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+      } else {
+        // Alert the user if fields are empty
+        window.alert('Please fill in all the fields before sending.');
+      }
+    }
+  </script>
 </body>
+
 </html>
